@@ -1,7 +1,8 @@
 
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
-import {BrowserRouter,Routes, Route} from "react-router-dom";
+import { ContextProvider } from "./Components/utils/global.context";
+import {Routes, Route} from "react-router-dom";
 import Home from "./Routes/Home";
 import Contact from "./Routes/Contact";
 import Favs from "./Routes/Favs";
@@ -10,6 +11,7 @@ import Detail from "./Routes/Detail";
 function App() {
   return (
       <div className="App">
+        <ContextProvider>
           <Navbar/>
           <Routes>
             <Route path="/" element={<Home/>}></Route>
@@ -19,6 +21,7 @@ function App() {
             <Route path="/detail/:odontologoid" element={<Detail/>}></Route>
           </Routes>
           <Footer/>
+          </ContextProvider>
       </div>
   );
 }
