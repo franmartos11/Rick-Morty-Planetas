@@ -11,11 +11,13 @@ export const initialState = {
       light: {
           backgroundHome:"#ffffff",
           backgroundNavbar:"#828181",
+          backgroundFooter:"#828181",
           color:"#000000"
       },
       dark: {
           backgroundHome:"#191919",
           backgroundNavbar:"#000000",
+          backgroundFooter:"#000000",
           color:"#ffffff"
       }
   },
