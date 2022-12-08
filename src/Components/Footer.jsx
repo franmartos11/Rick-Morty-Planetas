@@ -7,9 +7,12 @@ const Footer = () => {
   const {Theme}= useContext(ContextGlobal)
   return (
     <footer style={{color:Theme.color,background:Theme.backgroundFooter}}>
-      <p>Powered by</p>
-      <img src="/images/DH.png" alt='DH-logo' />
       <div>
+        <p>Powered by</p>
+        <img src="/images/DH.png" alt='DH-logo' />
+      </div>
+      
+      <div className='socials'>
         <img src="/images/ico-instagram.png" alt='instagram-logo'/>
         <img src="./images/ico-facebook.png" alt='facebook-logo'/>
         <img src="./images/ico-tiktok.png" alt='tiktok-logo'/>

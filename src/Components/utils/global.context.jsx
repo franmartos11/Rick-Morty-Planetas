@@ -35,8 +35,8 @@ export const ContextProvider = ({ children }) => {
       fetchData()
   }, [])
   
-  const [Theme, setTheme] = useState(initialState.themes.dark)
-  const handleThemeChange=()=>{
+  const [Theme, setTheme] = useState(initialState.themes.light)
+  const handleThemeChange= ()=>{
     if (Theme === initialState.themes.light) setTheme(initialState.themes.dark)
     if (Theme === initialState.themes.dark) setTheme(initialState.themes.light)
   }

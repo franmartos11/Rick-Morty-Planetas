@@ -8,13 +8,13 @@ import { useParams } from 'react-router-dom'
 const Detail = () => {
 
   const { Theme } = useContext(ContextGlobal)
-  const params = useParams()
+  const id = useParams()
   const [Odontologo, setOdontologo] = useState({})
   
 
   useEffect(() => {
       const fetchData = async () => {
-          axios(`https://jsonplaceholder.typicode.com/users/${params.id}`)
+          axios(`https://jsonplaceholder.typicode.com/users/${id}`)
           .then(res => setOdontologo(res.data))
       }
       
@@ -26,18 +26,19 @@ const Detail = () => {
 
   return (
     <>
-      <h1>Detail Dentist id: {Odontologo.id} </h1>
+      <div style={{backgroundColor:Theme.backgroundFooter}}>
+        <h1>Detail Dentist id: {Odontologo.id} </h1>
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-      <div>
-        <img src="/images/doctor.jpg" alt="doctor" />
-        <h3>Name: {Odontologo.name}</h3>
-        <p>Email: {Odontologo.email}</p>
-        <p>Phone: {Odontologo.phone}</p>
-        <p>Website:  {Odontologo.website}</p>
+       <div>
+          <img src="/images/doctor.jpg" alt="doctor" />
+          <h3>Name: {Odontologo.name}</h3>
+          <p>Email: {Odontologo.email}</p>
+          <p>Phone: {Odontologo.phone}</p>
+          <p>Website:  {Odontologo.website}</p>
         
+        </div>
       </div>
-
     </>
   )
 }

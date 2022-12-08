@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0rem;
 }
 
 code {
@@ -25,26 +26,34 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
+  width: 100%;
   justify-content: flex-start;
   padding: 1rem;
   align-items: center;
   justify-content: space-around;
 }
 
+
+nav .links{
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
 nav img{
-  max-width: 10rem;
-  color:#dddddd
+  max-width: 15rem;
 }
 
 a{
-  color: #000;
+  color: inherit;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
 }
 a:hover{
-  color: rgb(136, 136, 136);
+  color: rgb(55, 193, 228);
 } 
 
 footer {
@@ -54,11 +63,18 @@ footer {
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
+  width: 100%;
   height: 40px;
   margin-top: 2rem;
 }
-
+footer div{
+  display: flex;
+  align-items: center;
+}
+footer .socials{
+  display: flex;
+  justify-content: flex-end;
+}
 footer img{
   width: 2rem;
   margin: 0;
@@ -130,7 +146,5 @@ tr:nth-child(even) {
   background-color: #12121296;
   color: white;
 }
-.dark > a {
-  color: white;
-}
+
 

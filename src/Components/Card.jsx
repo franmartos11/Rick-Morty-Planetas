@@ -1,7 +1,7 @@
 import React from "react"
 import { useContext } from "react"
 import { ContextGlobal } from "./utils/global.context"
-import Link from "react-router-dom"
+import { Link } from "react-router-dom";
 
 
 const Card = ({ name, username, id }) => {
@@ -18,7 +18,7 @@ const Card = ({ name, username, id }) => {
         flag = false
         let index = favorites.indexOf(fav)
         favorites.splice(index,1)
-        
+
       }
     })
     if (flag === true){
@@ -28,10 +28,10 @@ const Card = ({ name, username, id }) => {
         "id":id,
       })
       localStorage.setItem("favs",JSON.stringify(favorites))
-      alert("agregado")
+      
     }else{
       localStorage.setItem("favs",JSON.stringify(favorites))
-      alert("borrado")
+      
     }
     setFavs(favorites)
   }
@@ -40,7 +40,7 @@ const Card = ({ name, username, id }) => {
     <div className="card">
         <img src="/images/doctor.jpg" alt="doctor" />
         <h2>Nombre: {name}</h2>
-        <h3>Username: {username}</h3>
+        <Link to={`detail/${id}`}><h3>Username: {username}</h3></Link>
         <button onClick={addFav} className="favButton">Add fav</button>
     </div>
   );
