@@ -28,6 +28,13 @@ nav{
   width: 80vw;
   justify-content: flex-start;
   padding: 1rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav img{
+  max-width: 10rem;
+  color:#dddddd
 }
 
 a{
@@ -52,10 +59,12 @@ footer {
   margin-top: 2rem;
 }
 
-footer > img{
-  width: 200px;
+footer img{
+  width: 2rem;
   margin: 0;
+  padding-left: 1rem;
 }
+
 footer > p{
   margin: 0;
   padding-top: 0.7rem;
@@ -78,6 +87,10 @@ form{
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+}
+
+.card img{
+  max-width: 12rem;
 }
 
 .card:hover{
@@ -120,3 +133,4 @@ tr:nth-child(even) {
 .dark > a {
   color: white;
 }
+
