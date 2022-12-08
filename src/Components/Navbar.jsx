@@ -7,16 +7,17 @@ const Navbar = () => {
   const{Theme,handleThemeChange}= useContext(ContextGlobal)
   return (
     <nav style={{color:Theme.color,background:Theme.backgroundNavbar}}>
-      <div>
-        <Link to="/"><img src="/images/DH.png" alt='DH-logo' /></Link>
+
+      <div class="logo">
+        <Link to="/">DH Odonto</Link>
       </div>
+      
       <div class="links" >
         <Link to="/"> Home </Link>
 			  <Link to="/contact"> Contact </Link>
 			  <Link to="/favs"> Favs </Link> 
-        <button onClick={handleThemeChange}><img src=""/></button>
+        <button onClick={handleThemeChange}>Theme</button>
       </div>
-      
       
     </nav>
   )
