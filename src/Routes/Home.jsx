@@ -22,7 +22,7 @@ const Home = () => {
     }, [])
 
   return (
-    <main className="" style={{background:Theme.backgroundHome, color:Theme.color}}>
+    <main class="home" style={{background:Theme.backgroundHome, color:Theme.color}}>
       <h1>Home</h1>
       <div className='card-grid'>
         {

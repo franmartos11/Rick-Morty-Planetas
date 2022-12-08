@@ -1,8 +1,11 @@
 import React from "react"
 import { useState } from "react"
 
+
+
 const Form = () => {
 
+  
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -10,18 +13,22 @@ const Form = () => {
 
   const [validation, setValidation] = useState(false)
 
-  const validate = () => {
+  const fullValidation = () => {
 
     let NameLastName = values.name.split(" ")
     let emailUser = values.email.split("@")
     let dotCom = emailUser[1].split(".")
 
+    
+    if (NameLastName.length < 2) return alert("Por favor rellene el campo correspondiente")
+    if (NameLastName[0].length < 3 || NameLastName[1].length < 3) return alert("por favor introduzca un nombre o apellido correcto")
 
-    if (NameLastName.length < 2) return alert("First and Last Name are Required")
-    if (NameLastName[0].length < 3 || NameLastName[1].length < 3) return alert("Not a valid Name")
-    if (emailUser.length < 2 && dotCom.length < 2) return alert("Not a valid Email")
+    
+    
+    if (dotCom.length < 2 || emailUser.length < 2) return alert("Email incorrecto, debe contener una '@' y una extension valida como '.com'")
 
     return true
+
   }
 
   const handleChange = (form) => {
@@ -35,37 +42,39 @@ const Form = () => {
     }
 
     setValues(newValues)
+
   }
 
   const handleSubmit = (form) => {
 
     form.preventDefault()
 
-    let validated = validate()
+    let validated = fullValidation()
 
     if (validated) {
       setValidation(true)
     }
 
   }
-
   return (
-    <div>
+    <div class="form">
 
       <form onSubmit={handleSubmit}>
 
         <label htmlFor="name">Full Name</label>
-        <input type="text" name="name" nChange={handleChange} />
+        <input type="text" name="name"  onChange={handleChange} />
 
         <label htmlFor="email">Email</label>
-        <input type="text" name="email" onChange={handleChange} />
+        <input type="text" name="email"  onChange={handleChange} />
 
-        <button type="submit" className="bton-form">SUBMIT</button>
+        <button type="submit" >SUBMIT</button>
 
       </form>
 
-      <div>
-        {validation ? <h2>The Form was submited Thanks: {values.name},we will reach to you soon!</h2>:""}
+      <div >
+
+      {validation ? <h3 >The Form was submited Thanks: {values.name},we will reach to you soon!</h3> : ""}
+
       </div>
 
     </div>

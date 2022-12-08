@@ -18,6 +18,7 @@ function App() {
             <Route path="/contact" element={<Contact/>}></Route>
             <Route path="/favs" element={<Favs/>}></Route>           
             <Route path="/detail/:id" element={<Detail/>}></Route>
+            <Route path="favs/detail/:id" element={<Detail/>}></Route>
           </Routes>
           <Footer/>
           </ContextProvider>

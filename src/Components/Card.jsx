@@ -4,9 +4,12 @@ import { ContextGlobal } from "./utils/global.context"
 import { Link } from "react-router-dom";
 
 
+
 const Card = ({ name, username, id }) => {
 
+  const { Theme } = useContext(ContextGlobal)
   const{Favs,setFavs}= useContext(ContextGlobal)
+
   const addFav = ()=>{
 
     let flag = true
@@ -37,7 +40,7 @@ const Card = ({ name, username, id }) => {
   }
   
   return (
-    <div className="card">
+    <div className="card" style={{background:Theme.backgroundCard,}}>
         <img src="/images/doctor.jpg" alt="doctor" />
         <h2>Nombre: {name}</h2>
         <Link to={`detail/${id}`}><h3>Username: {username}</h3></Link>
