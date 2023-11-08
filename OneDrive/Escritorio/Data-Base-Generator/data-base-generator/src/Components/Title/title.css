@@ -1,0 +1,14 @@
+.contactus{
+    background-color: #007bb6;
+    display: flex;
+    justify-content: center;
+}
+.contactus h3{
+max-width: 80rem;
+    text-align: center;
+    margin: 0rem;
+    padding: 2.5rem;
+    font-size:x-large;
+    font-style: oblique;
+    color: #fff;
+}

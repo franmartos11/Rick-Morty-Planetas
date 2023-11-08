@@ -1,0 +1,87 @@
+
+.formWrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 3rem;
+}
+.formWrapper > form{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #007bb6;
+}
+.inputsWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: azure;
+    font-size: larger;
+    padding: 2rem;
+}
+.input > label{
+    padding: 0.4rem;
+}
+.input > input{
+    max-width: 200px;
+    min-height: 40px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    outline: none;
+    background: #e8e8e8;
+    box-shadow: 5px 5px 17px #224a64,
+                -5px -5px 17px #6e90e0;
+    border: none;
+    border-radius: 10px;
+    transition: all .5s;
+}
+.input > input:focus{
+    background: #e8e8e8;
+    box-shadow: inset 5px 5px 17px #c8c8c8,
+            inset -5px -5px 17px #ffffff;
+}
+
+.checkboxWrapper{
+    color: azure;
+    display: flex;
+    padding:3rem;
+    padding-left: 2rem;
+}
+.optionBoxesWrapper{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+.buttonWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttonWrapper > button{
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgb(14, 14, 26);
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px #1f4c65;
+}
+
+.buttonWrapper > button:active{
+    scale: 0.92;
+}
+.buttonWrapper > button:hover{
+    background: rgb(2,29,78);
+    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+    color: rgb(4, 4, 38); 
+}
