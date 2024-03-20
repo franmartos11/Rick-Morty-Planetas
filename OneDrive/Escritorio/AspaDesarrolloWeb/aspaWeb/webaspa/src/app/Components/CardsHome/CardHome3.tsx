@@ -6,7 +6,7 @@ import React from "react";
 import Link from "next/link";
 import { CardBody, CardContainer, CardItem } from "./CardContainer";
 
-export function CardHome() {
+export function CardHome3() {
   return (
     <CardContainer className="inter-var">
       <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-blue-500/[0.2] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
@@ -14,18 +14,18 @@ export function CardHome() {
           translateZ="50"
           className="text-xl font-bold text-neutral-600 dark:text-white"
         >
-          Experiencia del Usuario
+          Servicio al Cliente
         </CardItem>
         <CardItem
           as="p"
           translateZ="60"
           className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
         >
-          En Aspa, creamos interfaces intuitivas y atractivas que proporcionan una experiencia del usuario excepcional, adaptándonos a las necesidades y preferencias específicas de nuestros clientes para garantizar su satisfacción.
+          En Aspa, nos comprometemos a brindar un servicio al cliente excepcional y un soporte técnico confiable en cada etapa, asegurando que nuestros clientes reciban la atención y ayuda que necesitan para maximizar el valor de nuestros productos.
         </CardItem>
         <CardItem translateZ="100" className="w-full mt-4">
           <Image
-            src="https://img.freepik.com/vector-premium/ilustracion-vector-grafico-personaje-dibujos-animados-ideas-creativas-innovacion-puesta-marcha_516790-1309.jpg"
+            src="https://www.collectivemexico.com/blog/wp-content/uploads/2017/05/2.Dise%C3%B1o-de-experiencia-de-usuario.jpg"
             height="1000"
             width="1000"
             className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"

@@ -5,6 +5,8 @@ import { TextGenerateEffect } from "./Components/GenerativeText/TextGenerateEffe
 import NavBar from "./Components/nav/NavBar";
 import { BentoGridDemo } from "./Components/Grid/BentoGridDemo";
 import CardHomeTriple from "./Components/CardsHome/CardHomeTriple";
+import Partners from "./Components/Partners/Partners";
+
 
 
 export default function Home() {
@@ -12,17 +14,13 @@ export default function Home() {
         <div>
             <NavBar></NavBar>
             <HeroHome></HeroHome>
-            <CardHomeTriple></CardHomeTriple>
-            
-            <BentoGridDemo></BentoGridDemo>
-            <div className="flex justify-center items-center h-[40rem]">
-                <div className="text-center w-[60rem]">
-                    <TextGenerateEffect words="Creamos Aspa con el objetivo de poder brindar a las empresas un software o sistemas de información que pueda ayudar a cumplir los objetivos que tengan. El ideal de Aspa se encuentra en conocer realmente la necesidad de nuestros clientes y poder acercarnos de la mejor manera para desarrollar una plataforma adecuada que solucione un problema, agilice un proceso o brinde información relevante para la obtención de mejores resultados." />
+            <div className="flex justify-center items-center h-20rem ">
+                <div className="text-center  w-[60rem]">
+                    <TextGenerateEffect words="Creamos Aspa con el objetivo de poder brindar a las empresas un software o sistemas de información que puedan ayudar a cumplir sus objetivos." />
                 </div>
             </div>
-
-            <CardHome></CardHome>
-            <Services></Services>
+            <CardHomeTriple></CardHomeTriple>
+            <Partners></Partners>
         </div>
     );
 }
